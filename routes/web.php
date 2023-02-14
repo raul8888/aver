@@ -20,13 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
+/* Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::group(['prefix'=> 'dashboard', 'middleware' => 'auth'], function(){
+ */
+Route::group(['prefix'=> 'dashboard', 'middleware' => ['auth', "admin"]], function(){
     Route::get('/', function(){
-        return view('dashboard');
+        return view("dashboard");
     })->name('dashboard');
     Route::resources([
         'post'=> PostController::class,

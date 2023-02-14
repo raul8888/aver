@@ -2,8 +2,7 @@
 
 @section('content')
     
-<a class="btn btn-succes" href="{{route('category.create')}}">Crear</a>
-<a class="btn btn-succes" href="{{route('post.index')}}">Principal</a>
+<a class="btn btn-succes" href="{{route('category.create')}}">Crear categoría</a>
     <table class="table mb-3">
 
         <thead>
